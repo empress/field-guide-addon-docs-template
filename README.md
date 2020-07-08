@@ -1,34 +1,46 @@
-# Ember CLI AddonDocs
+field-guide-addon-docs-template
+==============================================================================
 
-[![npm version](https://img.shields.io/npm/v/ember-cli-addon-docs.svg?style=flat-square)](http://badge.fury.io/js/ember-cli-addon-docs)
-[![Build Status](https://img.shields.io/travis/ember-learn/ember-cli-addon-docs.svg?style=flat-square)](https://travis-ci.org/ember-learn/ember-cli-addon-docs)
+This is a template designed to work with [field-guide](https://github.com/empress/field-guide) and is a fully-functional, static site implementation of a documentation site built on EmberJS with fully working out of the box SEO friendly output. It supports being hosted on Netlify, Github Pages, AWS S3 or any other static site hosting solution.
 
----
+This template is a fork of the visual aspects of [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs) but allowing you to use the underlying Field Guide implemenetation. This is intended to be used by people who are in the progress of migrating from ember-cli-addon-docs and don't want a drastic visual change at the same time. **I'm not sure how long this template will be supported** as it has quite a complex build system inherited from the upstream project.
 
-**2/28/20 Update: AddonDocs is in Maintenace Mode.**
+For more information on how to use this system [read the Field Guide documentation](https://github.com/empress/field-guide#readme) but if you want to get started straight away, try the quick start below.
 
-AddonDocs is still actively being used by many addons, but is effectively in maintenance mode as the original authors are no longer working on this project.
+If you want an example of Field Guide "in production" (with a different template) then check out the [Ember Styleguide](https://ember-styleguide.netlify.app). If you use Field Guide in production let me know [on Twitter](https://twitter.com/real_ate) and I can add a "built with field-guide" wiki.
 
-So, there's lots of good stuff in here, but use it at your own risk!
+You do not need to be a web developer to be able to use this system. You just write markdown files and the rest of the work is performed by EmberJS' build system.
 
-If you run into parts of the guides that are confusing or out-of-date, check the issues/PRs, or hop into the #ec-addon-docs channel in Discord.
+Quick Start
+------------------------------------------------------------------------------
 
----
+```sh
+npm init ember-addon super-addon
 
-Easy documentation for Ember addons.
+cd super-addon
 
-[View the docs here](https://ember-learn.github.io/ember-cli-addon-docs/).
+ember install field-guide field-guide-addon-docs-template
+```
 
-## Feature requests
+It will ask you if you want to update the `index.html` file and you should say yes 👍
 
-Please open an issue and add a :+1: emoji reaction. We will use the number of reactions as votes to indicate community interest, which will in turn help us prioritize feature development.
+If you want to see Field Guide running on your local machine just run `npm start` and you will be able to navigate to  [http://localhost:4200](http://localhost:4200) to see the system in action.
 
-You can view the most-upvoted feature requests with [this link](https://github.com/ember-learn/ember-cli-addon-docs/issues?q=is%3Aopen+label%3A%22Feature+%2F+Enhancement%22+sort%3Areactions-%2B1-desc).
+Compatibility
+------------------------------------------------------------------------------
 
-## Getting help
+* Ember.js v3.12 or above
+* Ember CLI v2.13 or above
+* Node.js v10 or above
 
-Please open an issue or [join the Ember community on Discord]( https://discord.gg/zT3asNS )
 
-## About
+Contributing
+------------------------------------------------------------------------------
 
-Created and maintained by [Dan Freeman](https://twitter.com/__dfreeman), [Chris Garrett](https://twitter.com/pzuraq), and [Sam Selikoff](https://twitter.com/samselikoff). Thanks to all of our [contributors](https://github.com/ember-learn/ember-cli-addon-docs/graphs/contributors)!
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).

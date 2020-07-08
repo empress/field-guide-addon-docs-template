@@ -53,7 +53,7 @@ body {
   @apply .docs-flex-col;
 }
 
-body > .ember-view {
+body > .docs-viewer {
   @apply .docs-flex-1;
   @apply .docs-flex;
   @apply .docs-flex-col;
@@ -114,4 +114,24 @@ h3 > a:before {
 
 table {
   width: 100%;
+}
+
+// hacks to get things to work properly ->
+
+.self-executing-code-block {
+  @apply docs-rounded docs-border docs-border-grey-lighter docs-my-8;
+}
+
+.self-executing-code-block .example {
+  @apply docs-p-4;
+}
+
+.self-executing-code-block {
+  pre[class*="language-"] {
+    margin: 0;
+  }
+}
+
+ul.nav-list-top > li:first-child {
+  @apply docs-mt-8 docs-capitalize;
 }

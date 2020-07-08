@@ -1,13 +1,12 @@
-/* eslint-env node */
+'use strict';
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'dummy',
-    podModulePrefix: 'dummy/pods',
     environment,
     rootURL: '/',
-    locationType: 'router-scroll',
-    historySupportMiddleware: true,
+    locationType: 'trailing-history',
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -22,7 +21,20 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    'field-guide': {
+      name: 'Product Name',
+      copyright: 'This is the default copyright string - update before publishing',
+
+      social: [{
+        name: 'github',
+        title: 'Design System Documentation - Repository',
+        link: 'https://github.com/empress/field-guide?update-with-your-repo-url'
+      }]
+    },
+
+    historySupportMiddleware: true
   };
 
   if (environment === 'development') {
@@ -46,8 +58,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // Allow ember-cli-addon-docs to update the rootURL in compiled assets
-    ENV.rootURL = 'ADDON_DOCS_ROOT_URL';
+    // here you can enable a production-specific feature
   }
 
   return ENV;

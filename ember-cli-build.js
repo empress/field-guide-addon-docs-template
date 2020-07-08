@@ -1,40 +1,9 @@
 'use strict';
 
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
-const Project = require('ember-cli/lib/models/project');
-const MergeTrees = require('broccoli-merge-trees');
-const Funnel = require('broccoli-funnel');
 
 module.exports = function(defaults) {
-  let project = Project.closestSync(process.cwd());
-
-  project.pkg['ember-addon'].paths = ['sandbox'];
-
-  defaults.project = project;
-
-  var app = new EmberAddon(defaults, {
-    project,
-    vendorFiles: { 'jquery.js': null, 'app-shims.js': null },
-
-    // Workaround for https://github.com/ember-cli/ember-cli/issues/8075
-    'ember-cli-uglify': {
-      uglify: {
-        compress: {
-          collapse_vars: false
-        }
-      }
-    },
-
-    'ember-cli-addon-docs': {
-      projects: {
-        sandbox: new MergeTrees([
-          new Funnel('sandbox/app', { destDir: 'sandbox' }),
-          new Funnel('sandbox', {
-            include: ['package.json', 'README.md']
-          })
-        ])
-      }
-    },
+  let app = new EmberAddon(defaults, {
     postcssOptions: {
       compile: {
         enabled: false,
@@ -46,6 +15,13 @@ module.exports = function(defaults) {
       },
     },
   });
+
+  /*
+    This build file specifies the options for the dummy test app of this
+    addon, located in `/tests/dummy`
+    This build file does *not* influence how the addon or the app using it
+    behave. You most likely want to be modifying `./index.js` or app's build file
+  */
 
   return app.toTree();
 };

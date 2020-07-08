@@ -2,40 +2,34 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.docs-md__h1,
-.docs-h1,
-.docs-md__h1 a,
-.docs-h1 a {
+main > h1,
+main > h1 a {
   @apply docs-mb-6 docs-text-grey-darkest docs-text-large-6 docs-font-extrabold docs-leading-tight docs-no-underline;
 }
 
-.docs-md__h2,
-.docs-h2,
-.docs-md__h2 a,
-.docs-h2 a {
+main > h2,
+main > h2 a {
   @apply docs-pt-8 docs-mb-4 docs-text-grey-darkest docs-text-large-4 docs-font-bold docs-leading-tight docs-no-underline;
 }
 
-.docs-md__h3,
-.docs-h3,
-.docs-md__h3 a,
-.docs-h3 a {
+main > h3,
+main > h3 a {
   @apply docs-pt-4 docs-mb-1 docs-text-grey-darkest docs-text-large-3 docs-font-bold docs-leading-normal docs-no-underline;
 }
 
-.docs-md p {
+main > p {
   @apply docs-mb-4;
 }
-.docs-md ul {
+main > ul {
   @apply docs-mb-4;
 }
-.docs-md ol {
+main > ol {
   @apply docs-mb-4;
 }
-.docs-md li {
+main > li {
   @apply docs-mb-2;
 }
-.docs-md aside {
+main > aside {
   @apply docs-mb-4 docs-mt-6 docs-bg-grey-lightest docs-italic docs-px-4 docs-py-3 docs-text-xs;
 }
 
@@ -57,14 +51,14 @@
   color: #abb2bf;
 }
 
-.docs-md__a {
+main a {
   @apply docs-text-brand docs-no-underline;
 }
-.docs-md__a:hover,
-.docs-md__a:focus {
+main a:hover,
+main a:focus {
   @apply docs-underline;
 }
 
-.docs-md__hr {
+main > hr {
   @apply docs-py-0 docs-my-8 docs-h-px docs-border-b;
 }

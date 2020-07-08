@@ -4,24 +4,7 @@ const getChannelURL = require('ember-source-channel-url');
 
 module.exports = async function() {
   return {
-    useYarn: true,
     scenarios: [
-      {
-        name: 'ember-lts-3.4',
-        npm: {
-          devDependencies: {
-            'ember-source': '~3.4.0'
-          }
-        }
-      },
-      {
-        name: 'ember-lts-3.8',
-        npm: {
-          devDependencies: {
-            'ember-source': '~3.8.0'
-          }
-        }
-      },
       {
         name: 'ember-lts-3.12',
         npm: {
@@ -62,7 +45,7 @@ module.exports = async function() {
           }
         }
       },
-      // The default `.travis.yml` runs this scenario via `yarn test`,
+      // The default `.travis.yml` runs this scenario via `npm test`,
       // not via `ember try`. It's still included here so that running
       // `ember try:each` manually or from a customized CI config will run it
       // along with all the other scenarios.

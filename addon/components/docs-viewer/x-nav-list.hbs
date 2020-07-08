@@ -1,0 +1,30 @@
+<ul class="nav-list" ...attributes>
+  {{#each @tocs as |toc|}}
+    {{#if toc.pages}}
+      <DocsViewer::XSection @label={{toc.title}} />
+      {{!-- <li class="field-guide-toc-item">
+        <span style={{leftPadStyle}}>
+          {{toc.title}}
+        </span>
+        <TableOfContents @tocs={{toc.pages}} @level={{inc @level}}/>
+      </li> --}}
+      <DocsViewer::XNavList @tocs={{toc.pages}} />
+    {{else}}
+      <li class="docs-mt-2 docs-ml-4 docs-mb-1 docs-flex docs-items-center docs-text-sm">
+        {{#link-to "show" toc.id
+          class="docs-text-grey-darker docs-no-underline hover:docs-underline"
+          activeClass="docs-text-brand docs-font-medium"
+          data-test-id="nav-item"
+          data-test-label=label}}
+          {{toc.title}}
+        {{/link-to}}
+      </li>
+    {{/if}}
+  {{/each}}
+
+  {{!-- {{yield (hash
+    section=(component "docs-viewer/x-section")
+    item=(component "docs-viewer/x-nav-item")
+    subnav=(component "docs-viewer/x-nav-list" class="docs-ml-4")
+  )}} --}}
+</ul>

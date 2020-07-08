@@ -1,0 +1,16 @@
+<DocsHeader @fieldGuideConfig={{this.fieldGuideConfig}} />
+
+<div class="docs-viewer docs-flex docs-flex-1">
+  <div class="md:docs-flex docs-w-full">
+
+    {{!-- <TableOfContents @tocs={{model}} @level={{1}}/> --}}
+
+    <DocsViewer::XNav @tocs={{model}} @level={{1}} />
+
+    {{#docs-viewer/x-main}}
+      {{outlet}}
+    {{/docs-viewer/x-main}}
+
+    {{!-- {{docs-viewer/x-current-page-index pageIndex=pageIndex}} --}}
+  </div>
+</div>
