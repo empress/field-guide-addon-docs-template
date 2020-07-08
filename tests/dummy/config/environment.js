@@ -30,7 +30,7 @@ module.exports = function(environment) {
       social: [{
         name: 'github',
         title: 'Design System Documentation - Repository',
-        link: 'https://github.com/empress/field-guide?update-with-your-repo-url'
+        link: 'https://github.com/empress/field-guide-addon-docs-template'
       }]
     },
 
