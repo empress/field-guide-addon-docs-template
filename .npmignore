@@ -26,11 +26,7 @@
 /yarn.lock
 .gitkeep
 
-# sandbox examples
-/lib/sandbox
-
 # ember-try
 /.node_modules.ember-try/
 /bower.json.ember-try
 /package.json.ember-try
-/test-apps
