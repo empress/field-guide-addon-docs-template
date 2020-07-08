@@ -1,17 +1,15 @@
 <header class="docs-shadow docs-relative docs-z-40 docs-bg-white">
   <div class="docs-flex docs-items-center docs-max-w-site-container docs-mx-auto md:docs-px-2">
-    {{#link-to "index"
-      class="docs-px-4 docs-py-5 docs-transition docs-uppercase docs-text-xxs docs-font-bold docs-no-underline"
-    }}
+    <LinkTo @route="index" class="docs-px-4 docs-py-5 docs-transition docs-uppercase docs-text-xxs docs-font-bold docs-no-underline">
       <span class="docs-leading-none docs-font-title docs-text-large-2 docs-font-normal docs-normal-case docs-block docs-mr-6">
-        {{#if prefix}}
+        {{#if this.prefix}}
           <div class="docs-text-xxs">
-            {{prefix}}
+            {{this.prefix}}
           </div>
         {{/if}}
         {{@fieldGuideConfig.name}}
       </span>
-    {{/link-to}}
+    </LinkTo>
 
     <div class="docs-flex-1 docs-flex docs-items-center docs-overflow-auto docs-scrolling-touch docs-mask-image md:docs-no-mask-image">
 
@@ -20,7 +18,7 @@
       </div>
 
       {{#each @fieldGuideConfig.social as |social|}}
-        <a href={{social.link}} title={{social.title}} target="_blank" rel="noopener">
+        <a href={{social.link}} title={{social.title}} target="_blank" rel="noopener noreferrer">
           <img src="/icons/social/{{social.name}}.svg" alt="" role="presentation" width="24" height="24">
         </a>
       {{/each}}
@@ -30,11 +28,3 @@
     </div>
   </div>
 </header>
-
-{{#if query}}
-  {{docs-header/search-results query=query on-visit=(action "didVisitPage")}}
-{{/if}}
-
-{{#if isShowingVersionSelector}}
-  {{docs-header/version-selector on-close=(action (mut isShowingVersionSelector false))}}
-{{/if}}

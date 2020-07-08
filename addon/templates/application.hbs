@@ -5,11 +5,11 @@
 
     {{!-- <TableOfContents @tocs={{model}} @level={{1}}/> --}}
 
-    <DocsViewer::XNav @tocs={{model}} @level={{1}} />
+    <DocsViewer::XNav @tocs={{this.model}} @level={{1}} />
 
-    {{#docs-viewer/x-main}}
+    <DocsViewer::XMain>
       {{outlet}}
-    {{/docs-viewer/x-main}}
+    </DocsViewer::XMain>
 
     {{!-- {{docs-viewer/x-current-page-index pageIndex=pageIndex}} --}}
   </div>
