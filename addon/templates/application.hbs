@@ -1,16 +1,11 @@
+<HeadLayout />
 <DocsHeader @fieldGuideConfig={{this.fieldGuideConfig}} />
 
 <div class="docs-viewer docs-flex docs-flex-1">
-  <div class="md:docs-flex docs-w-full">
-
-    {{!-- <TableOfContents @tocs={{model}} @level={{1}}/> --}}
+  <div class="md:docs-flex docs-w-full docs-flex-grow">
 
     <DocsViewer::XNav @tocs={{this.model}} @level={{1}} />
 
-    <DocsViewer::XMain>
-      {{outlet}}
-    </DocsViewer::XMain>
-
-    {{!-- {{docs-viewer/x-current-page-index pageIndex=pageIndex}} --}}
+    {{outlet}}
   </div>
 </div>

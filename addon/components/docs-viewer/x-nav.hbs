@@ -11,12 +11,12 @@
   <nav
     class="
       docs-absolute docs-right-0 md:docs-relative docs-shadow-lg md:docs-shadow-none docs-mr-2 md:docs-mr-0 md:docs-pl-2
-      docs-max-w-xs docs-w-90% md:docs-w-72 docs-z-10 docs-transition md:docs-sticky md:docs-top-0
+      docs-max-w-xs docs-w-90% docs-h-full md:docs-w-72 docs-z-10 docs-transition md:docs-sticky md:docs-top-0
       {{if this.media.isMobile
         (if this.isShowingMenu "docs-opacity-100 docs-bg-white" "docs-opacity-0 docs-pointer-events-none")
       }}
     ">
-    <div class="docs-pt-px docs-mb-8 docs-px-3 md:docs-px-4 md:docs-max-h-screen md:docs-overflow-y-scroll">
+    <div class="docs-pt-px docs-mb-8 docs-px-3 md:docs-px-4 md:docs-max-h-screen md:docs-overflow-y-scroll docs-flex docs-flex-col docs-h-full">
       {{#if this.media.isMobile}}
         <div class="docs-text-right">
           <button type="button" {{on "click" (fn (mut this.isShowingMenu) false)}}
@@ -26,7 +26,7 @@
         </div>
       {{/if}}
 
-      <DocsViewer::XNavList @tocs={{this.sortedTocs}} class="nav-list-top" />
+      <DocsViewer::XNavList @tocs={{this.sortedTocs}} class="nav-list-top docs-flex-grow" />
 
       <div class="docs-mt-16 lg:docs-mb-16 docs-mr-2 docs-text-xxs docs-rounded">
         <a href="https://github.com/empress/field-guide"
