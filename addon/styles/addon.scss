@@ -136,7 +136,8 @@ ul.nav-list-top > li:first-child {
   @apply docs-mt-8 docs-capitalize;
 }
 
-body.application.index .AddonDocs-DocsViewer-Nav {
+body.application.index .AddonDocs-DocsViewer-Nav,
+body.application.index .AddonDocs-DocsViewer-CurrentPageIndex {
   display: none;
 }
 
