@@ -24,7 +24,9 @@ module.exports = function(environment) {
     },
 
     'field-guide': {
-      name: 'Product Name',
+      name: 'field-guide-addon-docs-template',
+      tagLine: 'a useful template to help you migrate away from ember-cli-addon-docs',
+
       copyright: 'This is the default copyright string - update before publishing',
 
       social: [{
