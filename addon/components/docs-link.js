@@ -1,3 +1,4 @@
+/* eslint-disable ember/no-classic-classes, prettier/prettier */
 import LinkComponent from '@ember/routing/link-component';
 
 /**
