@@ -5,7 +5,7 @@
   {{if (eq @style "large") "docs-mt-8 docs--mb-4 docs-text-xs docs-uppercase"}}
   {{if (eq @style "subsection") "docs-mt-2 docs-text-sm"}}
 ">
-  {{#if hasBlock}}
+  {{#if (has-block)}}
     {{yield}}
   {{else}}
     {{@label}}

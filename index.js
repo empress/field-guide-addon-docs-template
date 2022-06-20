@@ -17,6 +17,7 @@ module.exports = {
 
       filter: {
         enabled: true,
+        exclude: ['**/*.css.map'],
         includePaths: [styleDir],
         plugins: [
           require('tailwindcss')(path.join( __dirname, 'addon', 'tailwind.config.js'))
